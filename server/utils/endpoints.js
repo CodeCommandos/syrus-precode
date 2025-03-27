@@ -29,9 +29,17 @@ export const MEET_ROUTES = {
   CANCEL: "/cancel/:meetingId",
 };
 
+export const TRADE_ROUTES = {
+  BUY: "/buy",
+  SELL: "/sell",
+  CHECK_BALANCE: "/balance",
+  ASSET: "/assets"
+}
+
 export const API_ROUTES = {
   USER: "/api/user",
   SOCIAL: "/api/social",
   CHAT: "/api/chat",
   MEETING: "/api/meet",
+  TRADE: "/api/trade"
 };
