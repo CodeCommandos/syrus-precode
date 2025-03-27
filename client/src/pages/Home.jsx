@@ -13,12 +13,12 @@ const Home = () => {
   const user = localStorage.getItem("currentUser");
   const navigate = useNavigate();
   
-  useEffect(() => {
-    if (!user) {
-      console.log(user);
-      navigate('/login');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!user) {
+  //     console.log(user);
+  //     navigate('/login');
+  //   }
+  // }, []);
 
   const reviews = [
     {

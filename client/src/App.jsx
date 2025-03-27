@@ -18,6 +18,8 @@ import Welcome from './pages/Welcome';
 import AdminDashboard from './pages/AdminDashboard';
 import News from './pages/News';
 import MarketVisualization from './pages/MarketVisalization';
+import ViewStock from './pages/ViewStock';
+import ViewCrypto from './pages/ViewCrypto';
 function App() {
 
 
@@ -40,6 +42,8 @@ function App() {
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/news" element={<News />} />
           <Route path="/market-visualtization" element={<MarketVisualization />} />
+          <Route path ="/view-stock/:symbol" element={<ViewStock />} />
+          <Route path ="/view-crypto/:symbol" element={<ViewCrypto />} />
         </Routes>
         <Toaster position="bottom-right" richColors />
      </Router>
