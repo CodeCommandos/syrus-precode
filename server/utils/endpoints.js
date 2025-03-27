@@ -33,7 +33,8 @@ export const TRADE_ROUTES = {
   BUY: "/buy",
   SELL: "/sell",
   CHECK_BALANCE: "/balance",
-  ASSET: "/assets"
+  ASSET: "/assets",
+  REALTIME: "/now"
 }
 
 export const API_ROUTES = {

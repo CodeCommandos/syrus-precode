@@ -8,7 +8,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { API_ROUTES } from "./utils/endpoints.js";
 import { getAccountInfo} from "../server/utils/getAccountInfo.js"
-import "../server/AlpacaSocket/alpacaSocket.js"
+//import "./alpaca_socket/newsStream.js"
+import {subscribeToRealtimeStock} from "./alpaca_socket/stockStream.js"
 
 import { EventEmitter } from "events";
 EventEmitter.defaultMaxListeners = 20;
@@ -106,5 +107,7 @@ getAccountInfo()
   .catch((error) => {
     console.error("Error fetching account info:", error);
   });
+
+subscribeToRealtimeStock('FAKEPACA')
 
 export default server;

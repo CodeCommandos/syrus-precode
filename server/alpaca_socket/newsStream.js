@@ -23,7 +23,7 @@ function connectToNewsStream() {
 
   ws.on("message", (data) => {
     const messages = JSON.parse(data.toString());
-    console.log("📩 Raw Message:", messages);
+    console.log(messages);
 
     messages.forEach((msg) => {
       if (msg.T === "subscription") {
@@ -39,9 +39,8 @@ function connectToNewsStream() {
 
   ws.on("close", () => {
     console.log("🔌 WebSocket connection closed. Reconnecting in 5s...");
-    setTimeout(connectToNewsStream, 5000); // Auto-reconnect after 5 seconds
+    setTimeout(connectToNewsStream, 5000); 
   });
 }
 
-// Automatically start WebSocket on import
 connectToNewsStream();
