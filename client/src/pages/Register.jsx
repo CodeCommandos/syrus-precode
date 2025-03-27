@@ -69,6 +69,7 @@ const Register = () => {
           },
         });
         setIsDialogOpen(false)
+        navigate('/welcome');
       } else {
         toast("Verification Failed", {
           description: "The OTP you entered is incorrect. Please try again.",
@@ -153,14 +154,15 @@ const Register = () => {
       >
         <div className="max-w-md mx-auto">
           <h1
-            className="text-4xl font-bold mb-4"
-            style={{ color: "var(--white-color)" }}
+            className="text-3xl font-bold mb-4 text-center"
+            style={{ color: "var(--white-color)", whiteSpace: "break-word" }}
           >
-            Join the world’s leading design community.
+              Join NiveshMitra: Empower Your Investments.
           </h1>
           <p className="text-base mb-4" style={{ color: "var(--white-color)" }}>
-            Showcase your portfolio, connect with professionals, and explore
-            endless opportunities in the design world.
+          Become part of a unified platform that consolidates market data, delivers
+          real-time analytics, and fosters collaborative trading. Take the first
+          step toward smarter investment decisions and secure financial insights.
           </p>
         </div>
       </div>

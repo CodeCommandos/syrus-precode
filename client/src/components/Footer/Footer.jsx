@@ -16,9 +16,9 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             className="space-y-4"
           >
-            <h3 className="text-xl font-bold">TechWave</h3>
+            <h3 className="text-xl font-bold">NiveshMitra</h3>
             <p className="text-muted-foreground">
-              Empowering the future through innovative solutions
+            Empowering smarter investments through real-time analytics, collaborative trading, and secure financial insights.
             </p>
           </motion.div>
 

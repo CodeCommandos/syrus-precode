@@ -9,12 +9,12 @@ import Home from "../src/pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ChatPage from './pages/ChatPage';
 import CreateGroup from './pages/CreateGroup';
-import Profile  from "../src/pages/Profile";
 import Experts from './pages/Experts';
 import Notifications from './pages/Notifications';
 import AcceptForm from "./pages/AcceptForm";
 import ConfirmRequest from "./pages/ConfirmRequest";
 import VideoPage from "./pages/VideoPage";
+import Welcome from './pages/Welcome';
 function App() {
 
 
@@ -34,6 +34,7 @@ function App() {
           <Route path="/meet/accept/:meetingId" element={<AcceptForm />} />
           <Route path="/confirm-request" element={<ConfirmRequest />} />
           <Route path="/video/:meetingId" element={<VideoPage />} />
+          <Route path="/welcome" element={<Welcome />} />
         </Routes>
         <Toaster position="bottom-right" richColors />
      </Router>

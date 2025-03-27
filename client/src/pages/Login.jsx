@@ -31,12 +31,7 @@ const Login = () => {
         console.log(response.data.user);
         dispatch(login(response.data.user));
         localStorage.setItem("currentUser", JSON.stringify(response.data.user));
-
-
-        setTimeout(()=>{
-          navigate('/');
-        },2000);
-        
+        navigate('/welcome')
       } else {
         toast("Login Failed", {
           description: response.data.message || "Invalid email or password.",
@@ -133,19 +128,19 @@ const Login = () => {
             className="text-4xl font-bold mb-4"
             style={{ color: "var(--white-color)" }}
           >
-            Explore the world’s leading design portfolios.
+             Empower Your Investments with NiveshMitra.
           </h1>
           <p className="text-base mb-4" style={{ color: "var(--white-color)" }}>
-            Millions of designers and agencies around the world showcase their
-            portfolio work on Flowbite – the home to the world’s best design and
-            creative professionals.
+          Discover a unified platform that consolidates market data, delivers real-time
+          analytics, and fosters collaborative trading. NiveshMitra is your gateway to
+          smarter investment decisions and secure financial insights.
           </p>
           <div className="flex items-center mt-4">
             <p
               className="text-base font-semibold mr-4"
               style={{ color: "var(--white-color)" }}
             >
-              Over 15.7k Happy Customers
+                 Trusted by Thousands of Investors Worldwide
             </p>
             <div className="flex -space-x-4">
               <Avatar className="relative z-30 border-2 border-white">

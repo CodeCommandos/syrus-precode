@@ -24,23 +24,27 @@ const Home = () => {
 
   const reviews = [
     {
-      name: "Sarah Johnson",
-      role: "CTO @TechCorp",
-      feedback: "TechWave transformed our business operations completely!",
+      name: "Amit Sharma",
+      role: "Retail Investor",
+      feedback:
+        "NiveshMitra has completely transformed how I approach investments. The real-time analytics are a game-changer!",
       rating: 5,
     },
     {
-      name: "Mike Chen",
-      role: "Startup Founder",
-      feedback: "The best platform for scalable solutions. Highly recommended!",
+      name: "Priya Verma",
+      role: "Financial Analyst",
+      feedback:
+        "The collaborative trading tools and blockchain security make this platform stand out. Highly recommended!",
       rating: 5,
     },
     {
-      name: "Emma Wilson",
-      role: "Product Manager",
-      feedback: "Intuitive interface with powerful features. Love it!",
+      name: "Rohit Gupta",
+      role: "Market Expert",
+      feedback:
+        "MarketRewind and Satellite Insights have given me unparalleled market perspectives.",
       rating: 4,
     },
+
   ];
 
   return (
@@ -56,16 +60,16 @@ const Home = () => {
             className="max-w-4xl space-y-6"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-800 bg-clip-text text-transparent">
-              Transform Your Digital Presence
+               Empower Your Investments with NiveshMitra
             </h1>
 
             <div className="text-2xl md:text-3xl text-muted-foreground">
               <Typewriter
                 words={[
-                  "AI-Powered Solutions",
-                  "Cloud Infrastructure",
-                  "Real-Time Analytics",
-                  "Enterprise Security",
+                   "Unified Market Data",
+                    "Real-Time Analytics",
+                    "Collaborative Trading",
+                    "Blockchain Security",
                 ]}
                 loop={true}
                 cursor
@@ -95,19 +99,34 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "AI Integration",
-                desc: "Smart solutions powered by machine learning",
-                icon: "🤖",
-              },
-              {
                 title: "Real-Time Analytics",
-                desc: "Instant insights with interactive dashboards",
+                desc: "Gain actionable insights with live market data and interactive dashboards.",
                 icon: "📊",
               },
               {
-                title: "Cloud Native",
-                desc: "Scalable infrastructure on secure cloud",
-                icon: "☁️",
+                title: "Blockchain Security",
+                desc: "Ensure secure and immutable transactions with blockchain technology.",
+                icon: "🔒",
+              },
+              {
+                title: "Collaborative Trading",
+                desc: "Work with your team in real-time to develop synergistic strategies.",
+                icon: "🤝",
+              },
+              {
+                title: "MarketRewind",
+                desc: "Replay historical market events to refine your strategies.",
+                icon: "⏪",
+              },
+              {
+                title: "Expert Video Call",
+                desc: "Connect with market experts via one-on-one video calls for personalized advice.",
+                icon: "📹",
+              },
+              {
+                title: "Simulated Trading",
+                desc: "Practice trading risk-free with our simulated environment.",
+                icon: "🎮",
               },
             ].map((feature, index) => (
               <motion.div
@@ -141,23 +160,23 @@ const Home = () => {
         <section className="my-24 max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <Accordion>
-            <AccordionItem
-              title="What makes TechWave different?"
-              content="Our unique combination of AI-powered analytics and enterprise-grade security sets us apart from competitors."
-            />
-            <AccordionItem
-              title="How secure is my data?"
-              content="We use military-grade encryption and comply with all major data protection regulations."
-            />
-            <AccordionItem
-              title="Can I integrate with existing tools?"
-              content="Yes! We offer seamless integration with all popular productivity and analytics tools."
-            />
-            <AccordionItem
-              title="What support options are available?"
-              content="24/7 premium support with dedicated account managers for enterprise clients."
-            />
-          </Accordion>
+        <AccordionItem
+          title="What is NiveshMitra?"
+          content="NiveshMitra is a unified platform that consolidates market data, provides real-time analytics, and fosters collaborative trading for smarter investment decisions."
+        />
+        <AccordionItem
+          title="How does NiveshMitra ensure security?"
+          content="We use blockchain technology to ensure secure and immutable transactions, along with advanced encryption protocols."
+        />
+        <AccordionItem
+          title="Can I practice trading without risks?"
+          content="Yes! Our simulated trading environment allows you to test and refine your strategies risk-free."
+        />
+         <AccordionItem
+          title="Is expert guidance available on NiveshMitra?"
+          content="Yes! NiveshMitra offers an Expert Video Call feature that allows you to connect with market experts for personalized advice and guidance tailored to your investment needs."
+        />
+         </Accordion>
         </section>
       </main>
 
