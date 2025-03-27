@@ -33,7 +33,7 @@ function App() {
           <Route path="/meet/request" element={<Notifications />} />
           <Route path="/meet/accept/:meetingId" element={<AcceptForm />} />
           <Route path="/confirm-request" element={<ConfirmRequest />} />
-          <Route path="/video/:meetingId" element={<VideoPage />} />
+          <Route path="/video/:id" element={<VideoPage />} />
           <Route path="/welcome" element={<Welcome />} />
         </Routes>
         <Toaster position="bottom-right" richColors />
