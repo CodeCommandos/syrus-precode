@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
-import { useTheme } from "../../context/Theme"; // Adjust the path as needed
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "../../context/Theme";
 import { Sun, Moon } from "lucide-react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { logout } from "../../redux/slice/Userslice"; // Adjust the path as needed
+import { logout } from "../../redux/slice/Userslice";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -12,26 +11,26 @@ const navItems = [
   { name: "Chat", path: "/chat" },
   { name: "Profile", path: "/profile" },
   { name: "Experts", path: "/experts" },
-  { name: "VideoCall", path: "/videocall" },
+  // Removed VideoCall from navItems since we'll handle it differently
 ];
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const location = useLocation(); // Get the current route location
   const handleLogout = () => {
-    // Remove user data from localStorage
     localStorage.removeItem("currentUser");
-
-    // Dispatch logout action to clear Redux state
     dispatch(logout());
-
-    // Navigate to the login page
     navigate("/login");
   };
 
+  const handleVideoCall = () => {
+    // Generate random room ID (6-digit alphanumeric)
+    const roomId = Math.random().toString(36).substring(2, 8);
+    navigate(`/video/${roomId}`);
+  };
 
   return (
     <motion.nav
@@ -55,7 +54,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className="flex gap-6 items-center">
           {navItems.map((item, index) => {
-            const isActive = location.pathname === item.path; // Check if the current route matches the item path
+            const isActive = location.pathname === item.path;
             return (
               <motion.div
                 key={item.name}
@@ -68,12 +67,11 @@ const Navbar = () => {
                   to={item.path}
                   className={`relative group px-4 py-2 rounded-full transition-colors ${
                     isActive
-                      ? "text-black dark:text-primary" // Orange background for active link
-                      : "hover:text-orange-500" // Orange text on hover for inactive links
+                      ? "text-black dark:text-primary"
+                      : "hover:text-orange-500"
                   }`}
                 >
                   {item.name}
-                  {/* Underline on hover */}
                   {!isActive && (
                     <motion.span
                       className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-500 transition-all group-hover:w-full"
@@ -85,11 +83,32 @@ const Navbar = () => {
               </motion.div>
             );
           })}
-          {/* Logout Link */}
+
+          {/* Video Call Button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: navItems.length * 0.1 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <button
+              onClick={handleVideoCall}
+              className="relative group px-4 py-2 rounded-full transition-colors hover:text-orange-500"
+            >
+              Video Call
+              <motion.span
+                className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-500 transition-all group-hover:w-full"
+                initial={{ width: 0 }}
+                whileHover={{ width: "100%" }}
+              />
+            </button>
+          </motion.div>
+
+          {/* Logout Button */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: (navItems.length + 1) * 0.1 }}
             whileHover={{ scale: 1.1 }}
           >
             <button
