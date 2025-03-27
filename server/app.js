@@ -7,6 +7,8 @@ import { Server } from "socket.io";
 import path from "path";
 import { fileURLToPath } from "url";
 import { API_ROUTES } from "./utils/endpoints.js";
+import { getAccountInfo} from "../server/utils/getAccountInfo.js"
+import "../server/AlpacaSocket/alpacaSocket.js"
 
 import { EventEmitter } from "events";
 EventEmitter.defaultMaxListeners = 20;
@@ -94,5 +96,13 @@ io.on("connection", (socket) => {
     console.log("User disconnected ", socket.id);
   });
 });
+
+getAccountInfo()
+  .then((accountInfo) => {
+    
+  })
+  .catch((error) => {
+    console.error("Error fetching account info:", error);
+  });
 
 export default server;
