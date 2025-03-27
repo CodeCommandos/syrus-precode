@@ -1,0 +1,7 @@
+{
+  "solidity.remappings": [
+    "@openzeppelin/=D:/Code/syrus25/syrus-precode/server/node_modules/@openzeppelin/"
+  ],
+  "solidity.packageDefaultDependenciesDirectory": "node_modules",
+  "solidity.packageDefaultDependenciesContractsDirectory": ""
+}

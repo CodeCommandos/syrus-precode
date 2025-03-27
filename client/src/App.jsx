@@ -15,6 +15,9 @@ import AcceptForm from "./pages/AcceptForm";
 import ConfirmRequest from "./pages/ConfirmRequest";
 import VideoPage from "./pages/VideoPage";
 import Welcome from './pages/Welcome';
+import AdminDashboard from './pages/AdminDashboard';
+import News from './pages/News';
+import MarketVisualization from './pages/MarketVisalization';
 function App() {
 
 
@@ -26,7 +29,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/profile" element={<Profile />}/>
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/experts" element={<Experts />} />
           <Route path="/create-group" element={<CreateGroup />} />
@@ -35,6 +38,8 @@ function App() {
           <Route path="/confirm-request" element={<ConfirmRequest />} />
           <Route path="/video/:id" element={<VideoPage />} />
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/market-visualtization" element={<MarketVisualization />} />
         </Routes>
         <Toaster position="bottom-right" richColors />
      </Router>

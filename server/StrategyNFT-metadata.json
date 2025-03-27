@@ -1,0 +1,13 @@
+{
+    "name": "Tesla Breakout Strategy",
+    "description": "A breakout trading strategy for Tesla stock (TSLA) designed to capture momentum moves.",
+    "attributes": {
+      "stock": "TSLA",
+      "asset": "Stock",
+      "entryRules": "Buy when TSLA price breaks above 50-day high with high volume.",
+      "exitRules": "Sell if price falls 3% below breakout level or RSI crosses above 75.",
+      "riskManagement": "Trailing stop loss at 5% below the highest price post-breakout.",
+      "performanceMetrics": "Backtested Win Rate: 68%, Average Return per Trade: 12%"
+    }
+  }
+  

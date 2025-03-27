@@ -11,6 +11,9 @@ const navItems = [
   { name: "Chat", path: "/chat" },
   { name: "Profile", path: "/profile" },
   { name: "Experts", path: "/experts" },
+  { name: "Admin", path: "/admin" },
+  { name: "News", path: "/news" },
+  { name: "Market", path: "/market-visualtization" },
   // Removed VideoCall from navItems since we'll handle it differently
 ];
 
