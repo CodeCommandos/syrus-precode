@@ -1,0 +1,7 @@
+Final Steps
+✅ Step 1: Use the CID to create an IPFS URI
+✅ Step 2: Call mintStrategy() with the metadata URI
+✅ Step 3: Retrieve tokenURI() to verify
+✅ Step 4: Open in a browser to check
+
+Now your NFT is fully on-chain and stored on IPFS! 🚀
